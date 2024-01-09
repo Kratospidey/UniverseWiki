@@ -12,6 +12,8 @@
 	--table-tr-bg: #312d4d; /* Alternating row background */
 	--table-hover-bg: #3d3a5e; /* Hover effect for rows */
 	--caption-text: #e0e0ff; /* Light purple text for the caption */
+	--card-bg: #301934;
+	--card-buton: #563e59;
 }
 
 a {
@@ -226,9 +228,7 @@ tbody tr:hover {
 	border-radius: 0 0 8px 8px; /* Rounded corners on the bottom */
 	display: inline-block; /* Ensure the background only covers the text */
 	max-width: calc(100% - 16px); /* Full width minus padding */
-	box-sizing: b
-	
-	order-box; /* Include padding in width calculations */
+	box-sizing: b order-box; /* Include padding in width calculations */
 }
 
 /* End of image with caption styling */
