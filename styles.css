@@ -116,16 +116,6 @@ h1 {
 	margin-right: 10%;
 }
 
-/* Black and white to color on hover */
-.bw-img {
-	filter: grayscale(100%);
-	transition: filter 0.5s ease;
-}
-
-.bw-img:hover {
-	filter: grayscale(0);
-}
-
 /* Table styles for dark mode space aesthetic */
 table {
 	width: 100%;
@@ -241,4 +231,55 @@ tbody tr:hover {
 
 .dark-matter-energy H2 {
 	text-align: center;
+}
+
+.card {
+	background-color: var(--card-bg); /* Use your --card-bg color */
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	width: 250px; /* Adjust the width as needed */
+	margin: 15px; /* Space around the card */
+	text-align: center;
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card-image {
+	width: 100%; /* Make the image cover the card width */
+	height: 150px; /* Adjust the height as needed */
+	object-fit: cover; /* This will make sure the image covers the area nicely */
+}
+
+.card-content {
+	padding: 15px;
+	color: var(--text);
+}
+
+.card-link {
+	display: inline-block;
+	background-color: var(--card-buton);
+	padding: 10px 20px;
+	margin-top: 15px;
+	border-radius: 5px;
+	color: var(--text);
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+}
+
+.card-link:hover {
+	background-color: var(--htext); /* Highlight color when hovered */
+}
+
+.card:hover .bw-img {
+    filter: grayscale(0);
+}
+
+.bw-img {
+    filter: grayscale(100%);
+    transition: filter 1s ease;
 }
