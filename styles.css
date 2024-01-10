@@ -235,38 +235,77 @@ tbody tr:hover {
 }
 
 .card {
-	background-color: var(--card-bg); /* Use your --card-bg color */
+	position: relative;
+	width: 300px;
+	height: 200px;
+	background-color: var(--card-bg);
 	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	overflow: hidden;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	transition: 0.3s;
-	width: 300px; /* Adjust the width as needed */
-	margin: 15px; /* Space around the card */
-	text-align: center;
-	transition: box-shadow 0.3s ease-in-out;
+	perspective: 1000px;
+	transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card svg {
+	width: 48px;
+	fill: #333;
+	transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card:hover {
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+	transform: scale(1.05);
+	box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
 
-.card-image {
+.card-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	background-color: var(--card-bg);
+	transform: rotateX(-90deg);
+	transform-origin: bottom;
+	transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card-content {
+	transform: rotateX(0deg);
+}
+
+.card-title {
+	margin: 0;
+	font-size: 20px;
+	color: var(--htext);
+	font-weight: 700;
+}
+
+.card:hover svg {
+	scale: 0;
+}
+
+.card-description {
+	margin: 10px 0 0;
+	font-size: 12px;
+	color: var(--caption-text);
+	line-height: 1.4;
+}
+
+.card-img {
 	width: 100%; /* Make the image cover the card width */
 	height: 200px; /* Adjust the height as needed */
 	object-fit: cover; /* This will make sure the image covers the area nicely */
 	aspect-ratio: 1/1;
 }
 
-.card-content {
-	padding: 15px;
-	color: var(--text);
-}
-
 .card-link {
 	display: inline-block;
 	background-color: var(--card-button);
 	padding: 10px 20px;
-	margin-top: 15px;
 	border-radius: 5px;
 	color: var(--text);
 	text-decoration: none;
@@ -278,11 +317,7 @@ tbody tr:hover {
 	background-color: var(--card-button-hover); /* Highlight color when hovered */
 }
 
-.card:hover .bw-img {
-	filter: grayscale(0);
-}
-
-.bw-img {
-	filter: grayscale(100%);
-	transition: filter 1s ease;
+.section {
+	display: flex;
+	gap: 20px;
 }
