@@ -12,8 +12,9 @@
 	--table-tr-bg: #312d4d; /* Alternating row background */
 	--table-hover-bg: #3d3a5e; /* Hover effect for rows */
 	--caption-text: #e0e0ff; /* Light purple text for the caption */
-	--card-bg: #301934;
-	--card-buton: #563e59;
+	--card-bg: #5a3d7a; /* A more purple-leaning shade for the card background */
+	--card-button: #7d5ba6; /* A purple shade for the button that complements the card background */
+	--card-button-hover: #9b82c3; /* A lighter purple for the hover state */
 }
 
 a {
@@ -239,7 +240,7 @@ tbody tr:hover {
 	overflow: hidden;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
-	width: 250px; /* Adjust the width as needed */
+	width: 300px; /* Adjust the width as needed */
 	margin: 15px; /* Space around the card */
 	text-align: center;
 	transition: box-shadow 0.3s ease-in-out;
@@ -251,8 +252,9 @@ tbody tr:hover {
 
 .card-image {
 	width: 100%; /* Make the image cover the card width */
-	height: 150px; /* Adjust the height as needed */
+	height: 200px; /* Adjust the height as needed */
 	object-fit: cover; /* This will make sure the image covers the area nicely */
+	aspect-ratio: 1/1;
 }
 
 .card-content {
@@ -262,7 +264,7 @@ tbody tr:hover {
 
 .card-link {
 	display: inline-block;
-	background-color: var(--card-buton);
+	background-color: var(--card-button);
 	padding: 10px 20px;
 	margin-top: 15px;
 	border-radius: 5px;
@@ -273,14 +275,14 @@ tbody tr:hover {
 }
 
 .card-link:hover {
-	background-color: var(--htext); /* Highlight color when hovered */
+	background-color: var(--card-button-hover); /* Highlight color when hovered */
 }
 
 .card:hover .bw-img {
-    filter: grayscale(0);
+	filter: grayscale(0);
 }
 
 .bw-img {
-    filter: grayscale(100%);
-    transition: filter 1s ease;
+	filter: grayscale(100%);
+	transition: filter 1s ease;
 }
